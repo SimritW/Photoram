@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Photosphere.Models.Photo>
+
+@{
+    ViewData["Title"] = "Favourite";
+}
+
+<h1>Favourite</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExposureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FStop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FocalLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxAperture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExposureBias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AffectedFocalLength)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+        <tr>
+            <td>
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Image)" style="width:175px; height:175px;"  />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExposureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FStop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FocalLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxAperture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExposureBias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AffectedFocalLength)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a href="data:image/jpeg;base64,@Convert.ToBase64String(item.Image)" download>Download</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

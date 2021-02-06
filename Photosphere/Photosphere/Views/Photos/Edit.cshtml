@@ -1,0 +1,103 @@
+﻿@model Photosphere.Models.Photo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="FileName" />
+            <input type="hidden" asp-for="FileType" />
+            <input type="hidden" asp-for="Image" />
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileType" class="control-label"></label>
+                <input asp-for="FileType" class="form-control" />
+                <span asp-validation-for="FileType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Manufacturer" class="control-label"></label>
+                <input asp-for="Manufacturer" class="form-control" />
+                <span asp-validation-for="Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExposureTime" class="control-label"></label>
+                <input asp-for="ExposureTime" class="form-control" />
+                <span asp-validation-for="ExposureTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FStop" class="control-label"></label>
+                <input asp-for="FStop" class="form-control" />
+                <span asp-validation-for="FStop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FocalLength" class="control-label"></label>
+                <input asp-for="FocalLength" class="form-control" />
+                <span asp-validation-for="FocalLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxAperture" class="control-label"></label>
+                <input asp-for="MaxAperture" class="form-control" />
+                <span asp-validation-for="MaxAperture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExposureBias" class="control-label"></label>
+                <input asp-for="ExposureBias" class="form-control" />
+                <span asp-validation-for="ExposureBias" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Width" class="control-label"></label>
+                <input asp-for="Width" class="form-control" />
+                <span asp-validation-for="Width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Height" class="control-label"></label>
+                <input asp-for="Height" class="form-control" />
+                <span asp-validation-for="Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AffectedFocalLength" class="control-label"></label>
+                <input asp-for="AffectedFocalLength" class="form-control" />
+                <span asp-validation-for="AffectedFocalLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Favourite" class="control-label"></label>
+                <input asp-for="Favourite" class="form-control" />
+                <span asp-validation-for="Favourite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

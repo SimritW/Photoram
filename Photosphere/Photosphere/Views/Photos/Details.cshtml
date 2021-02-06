@@ -1,0 +1,104 @@
+﻿@model Photosphere.Models.Photo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<input type="button" class="btn btn-outline-success m-1" value="Add to Favourite" onclick="location.href='@Url.Action("AddToFav", "Photos", new { id = Model.Id })'">
+<input type="button" class="btn btn-outline-success m-1" value="Add to Comments" onclick="location.href='@Url.Action("AddToComment", "Photos", new { id = Model.Id })'">
+
+<div class="col-lg-6  align-items-start">
+    <h4>Photo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.FileType)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.FileType)
+        </dd>
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.ExposureTime)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.ExposureTime)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.FStop)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.FStop)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.FocalLength)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.FocalLength)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.MaxAperture)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.MaxAperture)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.ExposureBias)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.ExposureBias)
+        </dd>
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.AffectedFocalLength)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.AffectedFocalLength)
+        </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+        <dd class="col-md-8">
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+    </dl>
+</div>
+<div class="col-lg-4  align-items-end">
+    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Image)" style="width: 100%; height: 100%;" />
+</div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

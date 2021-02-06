@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Photosphere.Models.Photo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Photos" asp-action="Search" class="form-inline nav-item">
+    <input type="radio" id="FileName" name="SearchType" value="FileName">
+    <label for="FileName">FileName</label><br><br>
+
+    <input type="radio" id="FileType" name="SearchType" value="FileType">
+    <label for="FileType">FileType</label><br><br>
+
+    <input type="radio" id="Manufacturer" name="SearchType" value="Manufacturer">
+    <label for="Manufacturer">Manufacturer</label><br><br>
+
+    <input type="radio" id="Model" name="SearchType" value="Model">
+    <label for="Model">Model</label><br><br>
+
+    <input type="radio" id="ExposureTime" name="SearchType" value="ExposureTime">
+    <label for="ExposureTime">ExposureTime</label><br><br>
+
+    <input type="radio" id="FStop" name="SearchType" value="FStop">
+    <label for="FStop">FStop</label><br><br>
+
+    <input type="radio" id="FocalLength" name="SearchType" value="FocalLength">
+    <label for="FocalLength">FocalLength</label><br><br>
+
+    <input type="radio" id="MaxAperture" name="SearchType" value="MaxAperture">
+    <label for="MaxAperture">MaxAperture</label><br><br>
+
+    <input type="radio" id="ExposureBias" name="SearchType" value="ExposureBias">
+    <label for="ExposureBias">ExposureBias</label><br><br>
+
+    <input type="radio" id="Width" name="SearchType" value="Width">
+    <label for="Width">Width</label><br><br>
+
+    <input type="radio" id="Height" name="SearchType" value="Height">
+    <label for="Height">Height</label><br><br>
+
+    <input type="radio" id="AffectedFocalLength" name="SearchType" value="AffectedFocalLength">
+    <label for="AffectedFocalLength">AffectedFocalLength</label><br><br>
+
+    <input type="radio" id="Comments" name="SearchType" value="Comments">
+    <label for="Comments">Comments</label><br><br>
+
+
+    <input name="Search" class="form-control" type="search" />
+    <button class="btn my-1 my-sm-0" type="submit">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExposureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FStop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FocalLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxAperture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExposureBias)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AffectedFocalLength)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Image)" style="width:175px; height:175px;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExposureTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FStop)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FocalLength)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxAperture)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExposureBias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Width)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AffectedFocalLength)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a href="data:image/jpeg;base64,@Convert.ToBase64String(item.Image)" download>Download</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<style type="text/css">
+    input[type="radio"] {
+        margin: 10px;
+    }
+
+    
+    
+</style>
