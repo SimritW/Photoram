@@ -71,7 +71,11 @@ namespace Photosphere.Controllers
             Photo photo = new Photo();
 
             if (Image != null && FileName != null && FileType != null)
-            {
+            {   
+                if(FileType != "image/jpeg")
+                {
+                    return RedirectToAction("Create", "Photos");
+                }
                 var imageFile = Image.OpenReadStream();
                 byte[] p1 = null;
                 
