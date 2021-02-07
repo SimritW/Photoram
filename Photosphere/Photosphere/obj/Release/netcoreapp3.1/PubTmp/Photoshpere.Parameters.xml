@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Photoshpere20210206214211" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\capstone\\new\ project\\Photosphere\\Photosphere\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Photosphere.Data.ApplicationDbContext" description="" value="Data Source=tcp:photoramdbserver.database.windows.net,1433;Initial Catalog=Photoram_db;User Id=simritwaraich@photoramdbserver;Password=Wasdisred.1" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\capstone\\new\ project\\Photosphere\\Photosphere\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\Photosphere\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>

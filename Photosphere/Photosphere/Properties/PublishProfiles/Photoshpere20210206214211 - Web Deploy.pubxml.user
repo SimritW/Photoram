@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoUPQiKL4QUOUoyVHqM/IMAAAAAACAAAAAAAQZgAAAAEAACAAAAAjFaZpjmSrHjqv4Y870pghiS8xY2XGv/BlQU+yH8imzgAAAAAOgAAAAAIAACAAAAAkUwl7/bvWfD0BCWGUYnN7B1qHuhIv5i2vdeOw9hJrCYAAAACDkC94cqJNAypZq+eAB8SFiEcM3fvpzJEBFf+qsTyu3zpnYRLj/20Xj0MYgrJ07acQ2q5+aDVYrJ9LFLTID3QHw+QpdF6cT0JV9NXHdGIPZrEXmaVxqpZygBMvnuHx5ogCJz1iDdrnMRdNIik/QucvSx7+ElI/e3OdONs3zTaykEAAAABazpuN0nirh4gDnfU7UO9f2iffXpsjX9zAgLHTVS+mr2u7IMo+90d5CF10kul5kWUeRMQd+kT7nLoq+WQf7YpB</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:photoramdbserver.database.windows.net,1433%3bInitial Catalog=Photoram_db%3bUser Id=simritwaraich%40photoramdbserver%3bPassword=Wasdisred.1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Photosphere.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:photoramdbserver.database.windows.net,1433%3bInitial Catalog=Photoram_db%3bUser Id=simritwaraich%40photoramdbserver%3bPassword=Wasdisred.1</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

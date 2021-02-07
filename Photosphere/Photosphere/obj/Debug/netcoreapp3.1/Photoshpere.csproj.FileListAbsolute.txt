@@ -182,7 +182,6 @@ D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Ar
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Views\Photos\AddToComment.cshtml.g.cs
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Views\Photos\Create.cshtml.g.cs
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Razor\Views\Photos\Delete.cshtml.g.cs
@@ -204,3 +203,4 @@ D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Photoshp
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Photoshpere.dll
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Photoshpere.pdb
 D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Photoshpere.genruntimeconfig.cache
+D:\capstone\new project\Photosphere\Photosphere\obj\Debug\netcoreapp3.1\Photoshpere.csprojAssemblyReference.cache

@@ -169,7 +169,7 @@ namespace Photosphere.Controllers
            
             return View(photo);
         }
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         // GET: Photos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -205,7 +205,7 @@ namespace Photosphere.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(Photo photo, int id,String FileName, String FileType, String Manufacturer, String Model, String ExposureTime, String FStop, String FocalLength, String MaxAperture, String ExposureBias, String Width, String Height, String AffectedFocalLength, Boolean Favourite, String Comments)
         {
 
